@@ -1,0 +1,40 @@
+<%- include('header'); -%>
+    <div class="fbdy">
+
+        <div class="bdyhead">
+
+
+            <div class="headd">
+                <h2>
+                    <%=listtitle%>
+                </h2>
+            </div>
+        </div>
+        <br> 
+        <div class="bdy">
+            <div class="lists">
+                <ul style="list-style-type: none;">
+
+                    <%for(var i=0;i<it.length;i++){%>
+                        <form action="/delete" method="post">
+                            <li>
+                                <input type="checkbox" onChange="this.form.submit()" name="checkbox" value=<%=it[i]._id%>>
+                                <p><%=it[i].work%></p>
+                            </li>
+                        </form>
+                        <hr>
+                        <%}%>
+
+
+
+
+                </ul>
+                <form action="/" method="post">
+                    <input type="text" name="newit" id="" autocomplete="off">
+                    <button type="submit" name="button" value=<%=listtitle%>> +</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<%- include('footer'); %>
