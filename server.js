@@ -113,7 +113,7 @@ const delete_data=async ()=>{
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: ["https://todo-dir-arif20484423.vercel.app/"],
     methods: ["POST","GET"],
     credentials: true
 }
