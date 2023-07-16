@@ -112,6 +112,12 @@ const delete_data=async ()=>{
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors({
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+}
+             ));
 //const loc=(__dirname+'/public')
 app.use(express.static('public'))
 // let items = ['cook food', 'eat food']
